@@ -1,0 +1,45 @@
+/*** FILTERS ***/
+
+
+.filters-wrap-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 4rem 0rem 4rem;
+}
+
+.filters-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h3 {
+    color: #448B2A;
+}
+
+.filters {
+    padding: 18px;
+    margin: 5px;
+    border-radius: 20px;
+    width: 170px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+    border: 3px solid #E38312;
+    background-color: transparent;
+    color: var(--orange, #E38312);
+}
+
+.selected {
+    border: 3px solid #FFC107;
+    background: linear-gradient(180deg, #FFC107 0%, #FD7E14 100%);
+    color: #FFFDF4;
+    transition: all 0.3s ease-in-out;
+} 

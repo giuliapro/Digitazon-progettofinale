@@ -1,0 +1,131 @@
+.footer-container {
+    background-color: #143508;
+    height: 400px;
+    display: flex;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 3rem;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.h2-footer {
+    color: #FFFDF4;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-footer {
+    width: 50%;
+    display: flex;
+    padding: 4rem 3rem;
+}
+
+.menu-footer-wrapper, .privacy-contacts-footer {
+    width: 50%;
+    height: 190px;
+}
+.privacy-contacts-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.nav-item-footer {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.light {
+    color: #FFFDF4;
+}
+
+.privacy-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.privacy-wrapper {
+    width: 50%;
+    height: 90px;
+}
+
+.contacts-wrapper {
+    width: 50%;
+    height: 100%;
+}
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    height: 100%;
+
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+    .footer-container {
+        flex-direction: column;
+        height: fit-content;
+        padding: 0;
+        padding-top: 3rem;
+    }
+    .footer-social {
+        width: 100%;
+        align-items: center;
+        padding: 1rem;
+    }
+    .info-footer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        height: fit-content;
+    }
+    .menu-footer, .contacts-footer, .privacy-footer {
+        align-items: center;
+        padding: 1rem;
+    }
+    .light{
+        padding: 0;
+    }
+    .privacy-contacts-footer {
+        align-items: center;
+        width: 100%;
+    }
+    .contacts-footer {
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .privacy-contacts-footer {
+        flex-direction: column;
+    }
+}

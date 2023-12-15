@@ -1,0 +1,39 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 6rem;
+    border-radius: 16px;
+    box-shadow: 12px -12px 32px 0px rgba(255, 193, 7, 0.20), 12px 12px 32px 0px rgba(144, 204, 97, 0.20), -12px 12px 32px 0px rgba(227, 131, 18, 0.20), -12px -12px 32px 0px rgba(68, 139, 42, 0.20);
+}
+
+.qr-code {
+    padding: 3rem;
+    width: 100%;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.h3-pop-up {
+    font-size: 30px !important;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.close-pop-up {
+    position: absolute;
+    top:15px;
+    right: 15px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.qr-code-img {
+    width: 100%;
+}

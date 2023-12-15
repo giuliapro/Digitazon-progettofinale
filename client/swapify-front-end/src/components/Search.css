@@ -1,0 +1,31 @@
+.searchbar {
+    width: 85%;
+    height: 50px;
+    margin-top: 50px;
+    border-radius: 16px;
+    border: 1px solid #448B2A;
+    padding: 1rem;
+    background-color: #FFFDF4;
+    font-size: 18px;
+}
+
+.wrapper-title {
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p {
+    color: #143508;
+}
+
+.empty-search {
+    height: 300px;
+}
+
+@media only screen and (max-width: 500px) {
+    .searchbar {
+        width: 100%;
+    }
+}

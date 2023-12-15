@@ -1,0 +1,230 @@
+body {
+    color: #143508;
+}
+
+h3.token-title,
+h3.settings-title {
+    font-size: 32px;
+}
+
+.green {
+    color: #448B2A
+}
+
+.settings-title {
+    color: #143508;
+}
+
+.orange {
+    color: #E38312
+}
+
+.nickname {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+.wrapper-added-events {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.wrapper-profile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: sticky;
+
+}
+
+.profile-aside {
+    width: 25%;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 1rem 2rem 1rem;
+    background-color: #fff7d8;
+}
+
+.wrapper-events-profile {
+    width: 75%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.profile-personal-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+    justify-content: space-between;
+}
+
+.wrapper-info-profile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 0 1rem 0;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.wrapper-half-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper-token {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0 1rem 0;
+}
+
+.wrapper-tot-token {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+}
+
+.wrapper-settings p {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.wrapper-settings p:hover {
+    color: #448B2A;
+}
+
+.wrapper-programmed-events h2,
+.wrapper-fav-events h2,
+.wrapper-fav-events span {
+    color: #448B2A;
+    margin-bottom: 20px;
+}
+
+.qr-code-button {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: transparent;
+
+}
+
+.wrapper-token-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 16px;
+    width: fit-content;
+    border: 3px solid #448B2A;
+}
+
+.wrapper-token-img p {
+    font-weight: 600;
+    color: #E38312;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+
+/** POP-UP ELIMINAZIONE **/
+.delete-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 16px;
+    background: white;
+    padding: 5rem;
+    border-radius: 16px;
+    box-shadow: 12px -12px 32px 0px rgba(255, 193, 7, 0.20), 12px 12px 32px 0px rgba(144, 204, 97, 0.20), -12px 12px 32px 0px rgba(227, 131, 18, 0.20), -12px -12px 32px 0px rgba(68, 139, 42, 0.20);
+    z-index: 999;
+}
+
+.delete-popup p {
+    margin-bottom: 20px;
+}
+
+.button-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.button-wrap button {
+    width: 12rem;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.btn--canc {
+    background-color: transparent;
+    border: 3px solid #696157;
+    color: #696157;
+    transition: all 0.2s ease-out;
+}
+
+.btn--canc:hover {
+    background-color: #696157;
+    color: var(--light, #FFFDF4);
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 960px) {
+    .wrapper-profile {
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+    .wrapper-added-events {
+        justify-content: center;
+    }
+
+    .wrapper-events-profile {
+        overflow: unset;
+    }
+
+    .profile-aside,
+    .wrapper-events-profile {
+        width: 100%;
+    }
+
+    .wrapper-half-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper-token {
+        width: 100%;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .wrapper-settings {
+        width: 100%;
+        padding: 0 1rem 0 1rem;
+    }
+}

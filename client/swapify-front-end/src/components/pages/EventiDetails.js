@@ -42,9 +42,6 @@ function EventiDetails({
 
 
 
-    // PUT Eventi ???
-
-
 
     const aggiungiEventoPreferiti = async () => {
         if (!user.email) {

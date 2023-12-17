@@ -70,6 +70,20 @@ input {
     font-weight: 700;
 }
 
+.wrapper-landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+    text-align: center;
+}
+
+.smiley-icon {
+    font-size: 45px;
+    color: #FD7E14;
+}
+
 @media only screen and (max-width: 500px) {
     .h2-form {
         font-size: 40px;

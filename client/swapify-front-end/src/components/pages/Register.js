@@ -22,7 +22,7 @@ function Register({ user, setUser }) {
             // Controlla la risposta del server
             if (response.status === 201) {
                 // Se la registrazione è riuscita, renderizza l'utente alla pagina profile
-                navigate('/profile')
+                navigate('/register-confirmation')
             } else if (response.status === 409) {
                 // Utente già registrato
                 console.error('L\'utente esiste già');

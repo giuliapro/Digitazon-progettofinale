@@ -88,7 +88,6 @@ app.post('/login', async (req, res) => {
             nickname: user.nickname,
             token
         })
-        console.log(loggedUsers)
 
         res.status(200).json({ message: 'Login effettuato con successo', token, user });
     } catch (error) {
@@ -103,7 +102,6 @@ app.post('/login', async (req, res) => {
 
 app.post('/logout', async (req, res) => {
     const { username } = req.body
-    console.log(username)
 
     const index = loggedUsers.findIndex(user => user.nickname == username)
 
@@ -111,8 +109,6 @@ app.post('/logout', async (req, res) => {
         loggedUsers.splice(index, 1)
         res.status(200).json({ message: 'Logout effettuato con successo.' })
     }
-    console.log('ciao')
-    console.log(loggedUsers)
 
 })
 

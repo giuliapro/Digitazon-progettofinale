@@ -14,6 +14,7 @@ import GuidesDetails from './components/pages/GuidesDetails';
 import Profile from './components/pages/Profile';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
+import RegisterConfirmation from './components/RegisterConfirmation';
 import Footer from './components/Footer';
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
             user={user}
             setUser={setUser}
           />} />
+          <Route path="/register-confirmation" element={<RegisterConfirmation />} />
         </Routes>
         <Footer />
       </Router>

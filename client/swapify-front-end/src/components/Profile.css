@@ -144,7 +144,7 @@ h3.settings-title {
 }
 
 
-/** POP-UP ELIMINAZIONE **/
+/** POP-UP LOGOUT E ELIMINAZIONE **/
 .delete-popup {
     position: fixed;
     top: 50%;

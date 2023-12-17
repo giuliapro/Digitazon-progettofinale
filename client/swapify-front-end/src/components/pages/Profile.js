@@ -7,6 +7,7 @@ import tokenImage from '../../images/icons/token.png'
 
 function Profile({ user, setUser }) {
     const [isDeletePopupVisible, setDeletePopupVisibility] = useState(false);
+    const [isLogoutPopupVisible, setLogoutPopupVisibility] = useState(false)
 
     const navigate = useNavigate()
 
@@ -18,7 +19,12 @@ function Profile({ user, setUser }) {
     }, [user])
 
 
-    async function logout() {
+    async function handleLogout() {
+        setLogoutPopupVisibility(true)
+    }
+
+
+    async function confirmLogout() {
         let response = await fetch('http://localhost:3001/logout', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
@@ -46,7 +52,7 @@ function Profile({ user, setUser }) {
                 }
             })
             if (response.status === 200) {
-                // Eliminazione riuscita, esegui azioni necessarie (es. logout)
+                // Eliminazione riuscita, rimuovi il token
                 localStorage.removeItem('jwt');
                 setUser({})
                 // Reindirizza l'utente alla home
@@ -105,7 +111,7 @@ function Profile({ user, setUser }) {
                     </div>
                     <div className="wrapper-settings">
                         <h3 className="settings-title">Impostazioni</h3>
-                        <p onClick={logout}>
+                        <p onClick={handleLogout}>
                             Logout
                         </p>
                         <p onClick={handleDeleteAccount}>
@@ -114,10 +120,24 @@ function Profile({ user, setUser }) {
                         <p>Privacy policy</p>
                     </div>
 
+                    {/* Pop-up di conferma logout */}
+                    {isLogoutPopupVisible && (
+                        <div className="delete-popup">
+                            <p>Sei sicuro di voler effettuare il logout?</p>
+                            <div className="button-wrap">
+                                <button className="btn btn--canc" onClick={() => setLogoutPopupVisibility(false)}>Annulla</button>
+                                <button className="btn btn--primary"onClick={confirmLogout}>Conferma</button>
+                            </div>
+
+                        </div>
+                    )}
+
                     {/* Pop-up di conferma eliminazione */}
                     {isDeletePopupVisible && (
                         <div className="delete-popup">
+                            <p>Ci dispiace vederti andare via <i class="fa-solid fa-face-frown"></i></p>
                             <p>Sei sicuro di voler eliminare il tuo account?</p>
+                            <p><strong>L'azione non potrà più essere annullata.</strong></p>
                             <div className="button-wrap">
                                 <button className="btn btn--canc" onClick={() => setDeletePopupVisibility(false)}>Annulla</button>
                                 <button className="btn btn--primary"onClick={confirmDeleteAccount}>Conferma</button>
